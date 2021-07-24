@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:wikly/modules/home/HomePage.dart';
 import 'package:wikly/shared/themes/AppColors.dart';
 import 'package:wikly/shared/themes/AppTextStyles.dart';
 
@@ -8,6 +9,7 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    redirectToHomeAfterDelay(context);
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Container(
@@ -36,6 +38,14 @@ class SplashPage extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Future<void> redirectToHomeAfterDelay(BuildContext context) async {
+    await Future.delayed(Duration(seconds: 1));
+    await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => HomePage()),
     );
   }
 }

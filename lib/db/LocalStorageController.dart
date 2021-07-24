@@ -1,5 +1,5 @@
 import 'package:localstore/localstore.dart';
-import 'package:wikly/models/todo_item.dart';
+import 'package:wikly/features/tasks/domain/entities/task.dart';
 
 class LocalStorageController {
   static final db = Localstore.instance;
@@ -19,7 +19,7 @@ class LocalStorageController {
   }
 
   TodoItem updateTodo(TodoItem item) {
-    db.collection('todos').doc(item.id).set(item.toMap());
+    db.collection(todoCollectionName).doc(item.id).set(item.toMap());
     return item;
   }
 

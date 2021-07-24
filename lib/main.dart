@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wikly/modules/home/HomePage.dart';
+import 'package:wikly/modules/splash/SplashPage.dart';
 // import 'package:wikly/modules/splash/SplashPage.dart';
 
 void main() {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: SplashPage(),
     );
   }
 }

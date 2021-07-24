@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wikly/db/LocalStorageController.dart';
-import 'package:wikly/models/todo_item.dart';
+import 'package:wikly/features/tasks/domain/entities/task.dart';
 import 'package:wikly/shared/themes/AppColors.dart';
 import 'package:wikly/shared/themes/AppTextStyles.dart';
 
